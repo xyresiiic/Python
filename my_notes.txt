@@ -1,0 +1,3 @@
+Hello! This is my first text file created by Python.
+Learning to code is fun!
+P.S. Python handles files very easily!
