@@ -1,3 +1,95 @@
-Hello! This is my first text file created by Python.
-Learning to code is fun!
-P.S. Python handles files very easily!
+# Complete Python Basics Cheat Sheet
+
+==================================================
+1. DATA TYPES & VARIABLES
+==================================================
+- Integer (int): Whole numbers. (age = 25)
+- Float (float): Decimal numbers. (price = 19.99)
+- Boolean (bool): True or False. (is_student = True)
+- String (str): Text data. (name = "Alice")
+
+==================================================
+2. DATA STRUCTURES
+==================================================
+- LIST: Ordered, changeable. Uses []. 
+  Example: colors = ["red", "blue"]
+- DICTIONARY: Unordered key-value pairs. Uses {}. 
+  Example: person = {"name": "Jordan", "age": 28}
+- TUPLE: Ordered, unchangeable. Uses (). 
+  Example: coords = (10, 20)
+- SET: Unordered, unique items only. Uses {}. 
+  Example: unique_nums = {1, 2, 3}
+
+==================================================
+3. BASIC MATH
+==================================================
+- Addition (+), Subtraction (-), Multiplication (*), Division (/)
+Example: result = 5 + 3
+
+==================================================
+4. USER INPUT & OUTPUT
+==================================================
+- Printing: print("Hello World")
+- Input: name = input("What is your name? ")
+
+==================================================
+5. CONDITIONALS
+==================================================
+- Used to make decisions in code.
+if score > 90:
+    print("A")
+elif score > 80:
+    print("B")
+else:
+    print("C")
+
+==================================================
+6. LOOPS
+==================================================
+- For Loop (iterating over a sequence):
+  for i in range(5): print(i)
+- While Loop (running until a condition is false):
+  while count < 10: count += 1
+
+==================================================
+7. FUNCTIONS
+==================================================
+- Reusable blocks of code defined with 'def'.
+def greet(name):
+    return f"Hello, {name}!"
+
+==================================================
+8. ERROR HANDLING
+==================================================
+- Prevents crashes using try/except blocks.
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+
+==================================================
+9. FILE I/O (READING & WRITING)
+==================================================
+- Writing: with open("file.txt", "w") as f: f.write("text")
+- Reading: with open("file.txt", "r") as f: print(f.read())
+- Appending: open with "a" mode.
+
+==================================================
+10. IMPORTS & MODULES
+==================================================
+- Bringing in external or built-in code.
+import random
+random_num = random.randint(1, 10)
+
+==================================================
+11. CLASSES & OBJECTS (OOP)
+==================================================
+- Blueprints for creating complex objects.
+class Dog:
+    def __init__(self, name):
+        self.name = name
+    def bark(self):
+        print("Woof!")
+        
+my_dog = Dog("Buddy")
+my_dog.bark()
