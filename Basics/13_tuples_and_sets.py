@@ -1,8 +1,8 @@
 # working with tuples and sets
 
 print("--- Tuples ---")
-# A Tuple is like a list, but it cannot be changed once created (it is "immutable").
-# We use parentheses () to create a tuple.
+# A Tuple is like a list, but it cannot be changed once created
+# We use () to create a tuple.
 coordinates = (10, 20)
 
 print("Original tuple:", coordinates)
@@ -13,9 +13,8 @@ print("Y coordinate:", coordinates[1])
 # coordinates[0] = 15  <- ERROR!
 
 print("\n--- Sets ---")
-# A Set is an unordered collection of unique items.
-# It automatically removes duplicates!
-# We use curly braces {} to create a set.
+# A Set is an unordered collection of unique items automatically removes duplicates 
+# use {} to create a set.
 unique_numbers = {1, 2, 3, 3, 3, 4, 5, 5}
 
 print("Original set (notice duplicates are gone!):", unique_numbers)
