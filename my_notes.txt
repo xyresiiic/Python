@@ -93,3 +93,19 @@ class Dog:
         
 my_dog = Dog("Buddy")
 my_dog.bark()
+
+==================================================
+12. DATES & TIMES
+==================================================
+- Working with real-world time.
+import datetime
+now = datetime.datetime.now()
+formatted = now.strftime("%Y-%m-%d %H:%M")
+
+==================================================
+13. LIST COMPREHENSIONS
+==================================================
+- Creating new lists in one line of code.
+numbers = [1, 2, 3, 4]
+doubled = [num * 2 for num in numbers]
+even_only = [num for num in numbers if num % 2 == 0]
