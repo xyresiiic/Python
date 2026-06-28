@@ -1,28 +1,40 @@
-# working with basic slicing
+# working with slicing
+# "Slicing" is a feature that lets you extract
 
-# "Slicing" lets you grab a specific part of a string or list.
-# We use brackets and a colon like this: [start:stop]
+# Let's create a string to slice
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+print("Original string:", alphabet)
 
-word = "Programming"
-print("Original word:", word)
+print("\n--- Basic Slicing [start:stop] ---")
 
-# 1. Grab the first 3 letters (starts at 0, stops before 3)
-first_part = word[0:3]
-print("First 3 letters [0:3]:", first_part)
+# Get the first 5 letters
+first_five = alphabet[0:5]
+print("First five letters [0:5]:", first_five)
 
-# 2. Grab the letters in the middle (starts at 3, stops before 7)
-middle_part = word[3:7]
-print("Middle letters [3:7]:", middle_part)
+# If you omit the start index, it assumes 0
+print("First five again [:5]:", alphabet[:5])
 
-# 3. If you leave out the start number, it assumes 0 (the beginning)
-start_to_five = word[:5]
-print("Beginning to 5 [:5]:", start_to_five)
+# If you omit the end index, it goes all the way to the end
+print("Everything after 'w' [23:]:", alphabet[23:])
 
-# 4. If you leave out the stop number, it goes all the way to the end
-three_to_end = word[3:]
-print("From 3 to the end [3:]:", three_to_end)
+print("\n--- Slicing with Steps [start:stop:step] ---")
+# You can add a third number to skip characters!
+# Let's get every second letter from the whole string
+every_other = alphabet[0:26:2]
+# Or shorter: alphabet[::2]
+print("Every other letter [::2]:", alphabet[::2])
 
-# Slicing also works exactly the same way on lists!
+print("\n--- Negative Slicing ---")
+# Negative indices count from the END of the string!
+print("The very last letter [-1]:", alphabet[-1])
+print("The last three letters [-3:]:", alphabet[-3:])
+
+# A famous Python trick: Reversing a string or list!
+reversed_alphabet = alphabet[::-1]
+print("Reversed string [::-1]:", reversed_alphabet)
+
+print("\n--- Slicing Lists ---")
+# Slicing works exactly the same way on lists!
 numbers = [10, 20, 30, 40, 50]
-print("\nOriginal list:", numbers)
-print("Middle numbers [1:4]:", numbers[1:4])
+print("List of numbers:", numbers)
+print("Middle three numbers [1:4]:", numbers[1:4])
