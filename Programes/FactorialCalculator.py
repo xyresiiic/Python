@@ -2,8 +2,6 @@
 import math
 
 def calculate_factorial(n):
-    # The factorial of a number (like 5!) is 5 * 4 * 3 * 2 * 1
-    # We can calculate this using a loop!
     
     # 0! is always 1
     if n == 0 or n == 1:
@@ -24,7 +22,6 @@ custom_result = calculate_factorial(number_to_test)
 print(f"Using our loop function: {number_to_test}! = {custom_result}")
 
 # Method 2: Using Python's built-in math module
-# (Python is great because it often has built-in tools for common math problems)
 builtin_result = math.factorial(number_to_test)
 print(f"Using the math module:   {number_to_test}! = {builtin_result}")
 

@@ -12,7 +12,6 @@ def calculate_compound_interest(principal, rate, times_compounded, years):
     # First, convert the percentage rate to a decimal
     decimal_rate = rate / 100
     
-    # Calculate the final amount using the formula
     # Remember: ** is used for exponents (powers) in Python
     amount = principal * (1 + decimal_rate / times_compounded) ** (times_compounded * years)
     
@@ -21,7 +20,6 @@ def calculate_compound_interest(principal, rate, times_compounded, years):
 print("--- Compound Interest Calculator ---")
 print("Let's see how money grows over time!\n")
 
-# Let's set up a scenario
 initial_investment = 1000  # $1,000
 interest_rate = 5          # 5% annual return
 compounded = 12            # Compounded monthly (12 times a year)
