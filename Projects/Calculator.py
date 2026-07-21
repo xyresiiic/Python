@@ -1,6 +1,3 @@
-# Basic Project: Simple Calculator
-# This project uses functions, while loops, and conditionals to build a calculator!
-
 def add(x, y):
     return x + y
 

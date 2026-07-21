@@ -1,6 +1,5 @@
 def main():
     print("--- 1. Iterating over a range ---")
-    # range(start, stop) -> goes from start up to stop-1
     for i in range(1, 6):
         print(f"Number: {i}")
 

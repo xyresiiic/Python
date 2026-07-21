@@ -1,20 +1,16 @@
-# Project: Currency Converter (Beginner Level)
-# Convert between currencies with ease!
-# Uses: Dictionaries, Loops, Functions, Input/Output, Exception Handling
-
 def get_exchange_rates():
     """Returns exchange rates relative to 1 INR (Indian Rupee)."""
     rates = {
-        "INR": 1.0,         # Indian Rupee (base)
-        "USD": 0.012,       # US Dollar
-        "EUR": 0.011,       # Euro
-        "GBP": 0.0094,      # British Pound
-        "JPY": 1.82,        # Japanese Yen
-        "AUD": 0.019,       # Australian Dollar
-        "CAD": 0.016,       # Canadian Dollar
-        "CNY": 0.087,       # Chinese Yuan
-        "AED": 0.044,       # UAE Dirham
-        "BDT": 1.44,        # Bangladeshi Taka
+        "INR": 1.0,
+        "USD": 0.012,
+        "EUR": 0.011,
+        "GBP": 0.0094,
+        "JPY": 1.82,
+        "AUD": 0.019,
+        "CAD": 0.016,
+        "CNY": 0.087,
+        "AED": 0.044,
+        "BDT": 1.44,
     }
     return rates
 
@@ -42,13 +38,11 @@ def show_rates(rates):
 def convert_currency(rates):
     print("\nAvailable currencies:", ", ".join(rates.keys()))
 
-    # Get source currency
     source = input("\nEnter source currency code: ").upper().strip()
     if source not in rates:
         print(f"'{source}' is not available!")
         return
 
-    # Get target currency
     target = input("Enter target currency code: ").upper().strip()
     if target not in rates:
         print(f"'{target}' is not available!")
@@ -58,7 +52,6 @@ def convert_currency(rates):
         print("Source and target are the same!")
         return
 
-    # Get amount
     try:
         amount = float(input(f"Enter amount in {source}: "))
         if amount <= 0:
@@ -68,7 +61,6 @@ def convert_currency(rates):
         print("Please enter a valid number.")
         return
 
-    # Convert: source -> INR -> target
     amount_in_inr = amount / rates[source]
     converted = amount_in_inr * rates[target]
 

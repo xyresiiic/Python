@@ -6,9 +6,7 @@ def right_angled_triangle(rows):
 def pyramid_triangle(rows):
     print("\nPyramid Triangle:")
     for i in range(1, rows + 1):
-        # Print spaces
         print(" " * (rows - i), end="")
-        # Print stars
         print("*" * (2 * i - 1))
 
 if __name__ == "__main__":

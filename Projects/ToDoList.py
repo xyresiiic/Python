@@ -51,7 +51,7 @@ def main():
     while True:
         display_menu()
         choice = input("Choose an option (1-5): ")
-        
+
         if choice == '1':
             view_tasks(tasks)
         elif choice == '2':

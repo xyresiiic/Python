@@ -1,7 +1,3 @@
-# Project: Expense Splitter (Beginner Level)
-# Split expenses easily among friends!
-# Uses: Lists, Dictionaries, Loops, Functions, Input/Output
-
 def show_menu():
     print("\n--- Expense Splitter ---")
     print("1. Add a Member")
@@ -31,7 +27,6 @@ def add_expense(members, expenses):
         print("Please enter a valid number.")
         return
 
-    # Who paid?
     print("\nWho paid?")
     for i, name in enumerate(members, 1):
         print(f"  {i}. {name}")
@@ -43,7 +38,6 @@ def add_expense(members, expenses):
         print("Invalid choice.")
         return
 
-    # Split equally among everyone
     split = amount / len(members)
     expenses.append({"item": item, "amount": amount, "paid_by": paid_by, "split": split})
     print(f"\n'{item}' - Rs.{amount:.2f} paid by {paid_by}")
@@ -66,15 +60,14 @@ def view_balances(members, expenses):
         print("\nNo expenses to show!")
         return
 
-    # Calculate how much each person owes or is owed
     balances = {}
     for name in members:
         balances[name] = 0.0
 
     for exp in expenses:
-        balances[exp["paid_by"]] += exp["amount"]  # Payer gets credit
+        balances[exp["paid_by"]] += exp["amount"]
         for name in members:
-            balances[name] -= exp["split"]  # Everyone pays their share
+            balances[name] -= exp["split"]
 
     print("\n--- Balances ---")
     for name in members:

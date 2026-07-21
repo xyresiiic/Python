@@ -1,16 +1,9 @@
-# Project: Palindrome Checker
-
 def is_palindrome(text):
-    # A palindrome is a word that reads the same forwards and backwards (like "racecar")
-    
-    # First, let's clean up the text! 
-    # We want to ignore spaces and make everything lowercase so "Race car" works.
+
     cleaned_text = text.replace(" ", "").lower()
-    
-    # We can use the awesome Python slicing trick [::-1] to reverse the string!
+
     reversed_text = cleaned_text[::-1]
-    
-    # If the cleaned text is exactly the same as the reversed text, it's a palindrome!
+
     if cleaned_text == reversed_text:
         return True
     else:

@@ -13,7 +13,6 @@ class ShapePrinter:
             if i == 0 or i == side - 1:
                 print("* " * side)
             else:
-                # 2 spaces per star except the first and last
                 print("*" + "  " * (side - 2) + " *")
 
     def print_rectangle(self, length, width):
@@ -33,16 +32,14 @@ class ShapePrinter:
 
     def print_diamond(self, rows):
         print(f"\nDiamond (Half-Rows: {rows})")
-        # Top half
         for i in range(1, rows + 1):
             print(" " * (rows - i) + "* " * i)
-        # Bottom half
         for i in range(rows - 1, 0, -1):
             print(" " * (rows - i) + "* " * i)
 
 def main():
     printer = ShapePrinter()
-    
+
     while True:
         print("\n--- Shape Printer Menu ---")
         print("1. Square")
@@ -52,9 +49,9 @@ def main():
         print("5. Pyramid")
         print("6. Diamond")
         print("7. Exit")
-        
+
         choice = input("Enter your choice (1-7): ")
-        
+
         try:
             if choice == '1':
                 side = int(input("Enter side length: "))

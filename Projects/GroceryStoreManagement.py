@@ -1,6 +1,3 @@
-# Basic Project: Grocery Store Management System
-# This project uses Classes, Dictionaries, and Loops to manage store inventory!
-
 class Product:
     def __init__(self, name, price, stock):
         self.name = name
@@ -10,7 +7,7 @@ class Product:
 class GroceryStore:
     def __init__(self, store_name):
         self.store_name = store_name
-        self.inventory = {}  # Dictionary to hold our products
+        self.inventory = {}
 
     def add_product(self, name, price, stock):
         if name in self.inventory:
@@ -43,36 +40,27 @@ class GroceryStore:
         if not self.inventory:
             print("The inventory is empty.")
             return
-            
+
         for name, product in self.inventory.items():
             print(f"Item: {name.ljust(10)} | Price: ${product.price:.2f} | Stock: {product.stock}")
         print("-----------------------------\n")
 
 
-# --- Testing our Grocery Store Management System ---
-
 print("Welcome to the Grocery Store Manager!")
 
-# 1. Create a store
 my_store = GroceryStore("Fresh Foods Market")
 
-# 2. Add some products
 my_store.add_product("Apples", 0.99, 50)
 my_store.add_product("Bananas", 0.59, 100)
 my_store.add_product("Milk", 3.49, 20)
 
-# 3. View the initial inventory
 my_store.display_inventory()
 
-# 4. Sell some items
 my_store.sell_product("Apples", 10)
 my_store.sell_product("Milk", 5)
 
-# 5. Try to sell more than we have!
 my_store.sell_product("Milk", 25)
 
-# 6. Receive a new shipment (update stock)
 my_store.update_stock("Milk", 30)
 
-# 7. View the final inventory
 my_store.display_inventory()

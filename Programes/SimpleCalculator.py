@@ -19,14 +19,14 @@ def calculator():
     print("2. Subtract")
     print("3. Multiply")
     print("4. Divide")
-    
+
     while True:
         choice = input("Enter choice (1/2/3/4) or 'q' to quit: ")
-        
+
         if choice.lower() == 'q':
             print("Exiting calculator...")
             break
-            
+
         if choice in ('1', '2', '3', '4'):
             try:
                 num1 = float(input("Enter first number: "))
@@ -43,7 +43,7 @@ def calculator():
                 print(f"Result: {num1} * {num2} = {multiply(num1, num2)}")
             elif choice == '4':
                 print(f"Result: {num1} / {num2} = {divide(num1, num2)}")
-            
+
             print("-" * 25)
         else:
             print("Invalid Input. Please select a valid operation.")

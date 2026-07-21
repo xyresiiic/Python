@@ -20,12 +20,11 @@ class StudentManager:
             json.dump(self.students, file, indent=4)
 
     def add_student(self, roll_no, name, age, course):
-        # Check if student exists
         for student in self.students:
             if student['roll_no'] == roll_no:
                 print(f"Student with Roll No {roll_no} already exists!")
                 return
-        
+
         student_data = {
             "roll_no": roll_no,
             "name": name,
@@ -68,19 +67,19 @@ def main():
         print("2. View All Students")
         print("3. Search Student by Roll No")
         print("4. Exit")
-        
+
         choice = input("Enter your choice (1-4): ")
 
         if choice == '1':
             roll_no = input("Enter Roll Number: ")
             name = input("Enter Name: ")
-            
+
             try:
                 age = int(input("Enter Age: "))
             except ValueError:
                 print("Invalid age! Please enter a number.")
                 continue
-                
+
             course = input("Enter Course: ")
             manager.add_student(roll_no, name, age, course)
 
